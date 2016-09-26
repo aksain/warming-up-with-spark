@@ -53,6 +53,9 @@ public class RoomOccupancyDetector {
 		// Print Schema to see column names, types and other metadata
 		featuresData.printSchema();
 
+		// Indexing is done to improve the execution times as comparing indexes
+		// is much cheaper than comparing strings/floats
+
 		// Index labels, adding metadata to the label column (Occupancy). Fit on
 		// whole dataset to include all labels in index.
 		final StringIndexerModel labelIndexer = new StringIndexer().setInputCol("Occupancy")
