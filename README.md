@@ -10,3 +10,6 @@ http://www.allprogrammingtutorials.com/tutorials/developing-java-applications-in
 # Getting started with RDDs in Apache Spark
 http://www.allprogrammingtutorials.com/tutorials/getting-started-with-rdds-in-spark.php
 
+# Running Spark Cluster Locally
+spark-class org.apache.spark.deploy.master.Master --host localhost --port 7077 --webui-port 8080
+spark-class org.apache.spark.deploy.worker.Worker  spark://localhost:7077 -c 1 -m 256M
